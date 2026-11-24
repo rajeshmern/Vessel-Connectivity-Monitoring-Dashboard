@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fleet Connectivity Monitor</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#view">Skip to content</a>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#/">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M3 21c3.2 0 3.2-3 6.4-3s3.2 3 6.4 3 3.2-3 6.4-3 3.2 3 6.4 3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M3 13c3.2 0 3.2-3 6.4-3s3.2 3 6.4 3 3.2-3 6.4-3 3.2 3 6.4 3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" opacity=".55"/>
+        </svg>
+        <span class="brand-text">Fleet Connectivity <br>Monitor</span>
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <a class="nav-link" data-nav="dashboard" href="#/">Overview</a>
+        <a class="nav-link" data-nav="vessels" href="#/vessels">Vessels</a>
+        <a class="nav-link" data-nav="alerts" href="#/alerts">Alerts <span id="nav-alert-count" class="nav-count" hidden></span></a>
+      </nav>
+
+      <div class="sim" id="sim-panel"></div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <h1 id="page-title">Overview</h1>
+        <div class="live" id="live-indicator" role="status" aria-live="polite"></div>
+      </header>
+      <main id="view" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <div id="toasts" aria-live="polite"></div>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
